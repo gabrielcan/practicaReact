@@ -1,30 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Title from './Title';
+//@ts-check
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import Contador from "./Incremento";
+import Formulario from "./components/formulario/Formulario";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        
-  <Title texto='Mi primera app' color='blue'/>
-  <Title texto='Mi primera app'/>
-  <Title texto='Mi primera app'/>
-
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <>
+        <Contador valorInicial={5} />
+        <Formulario />
+      </>
     </div>
   );
 }
